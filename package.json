@@ -1,0 +1,35 @@
+{
+  "name": "mfe",
+  "version": "0.0.1",
+  "description": "Map Features Extractor",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape test/*.js",
+    "checkcodestyle": "jshint index.js && jscs index.js --preset=google",
+    "build": "browserify -s mfe index.js > map-feature-extractor.js && uglifyjs map-feature-extractor.js -c -m > map-feature-extractor.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ThomasG77/mfe.git"
+  },
+  "keywords": [
+    "leaflet",
+    "openlayers",
+    "geojson"
+  ],
+  "author": "Thomas Gratier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThomasG77/mfe/issues"
+  },
+  "homepage": "https://github.com/ThomasG77/mfe",
+  "devDependencies": {
+    "browserify": "^6.1.0",
+    "glob": "~4.0.0",
+    "jscs": "^1.7.3",
+    "jshint": "^2.5.6",
+    "tape": "~2.13.1",
+    "uglifyjs": "^2.3.6"
+  },
+  "dependencies": {}
+}
